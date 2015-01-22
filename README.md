@@ -11,7 +11,7 @@
 ``` Html
 <html>
   <head>
-	<script src="require.js"></script>
+	<script src="jmd.js"></script>
 	<script src="main.js"></script>
   </head>
   <body>
