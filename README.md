@@ -39,15 +39,13 @@ main.js是你的程序的入口，名字也可任意的
     var util = require('util');
     var $ = require('jquery');
     
-    //TODO:	
-    
     module.exports = {
     	//TODO:
     };
   });
   
   // util.js
-  define('util', function (require, module, exports){
+  define('util', ['zip', 'md5'] , function (require, module, exports){
     
     function trim(str){
     }
@@ -56,7 +54,7 @@ main.js是你的程序的入口，名字也可任意的
     
   });
 ```
-模块名称就是文件的名称
+模块名称就是文件的名称, 多个模块也可以写在一个js文件中（例如最后压缩成一个js文件也可以，不需要关心顺序）。
 
 # 配置
 - 修改加载目录:
@@ -70,3 +68,22 @@ main.js是你的程序的入口，名字也可任意的
 然后在控制台查看包加载和依赖关系：
 
 ![Completion](https://raw.githubusercontent.com/deyuwang/jmd.js/master/images/screenshot.png)
+
+
+# 第三方js库:
+``` Javascript
+    // 假如第三方库是jquery
+    var $ = require('jquery');
+    
+    // 如果jquery没有遵循CMD或者AMD，下面两种写法均可：
+    var bar = require('jquery');  // 写法一
+    
+    require('jquery');  // 写法二
+    
+    // 正常使用
+    $('div').css({});
+    
+    module.exports = {
+    	//TODO:
+    };
+```
