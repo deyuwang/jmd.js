@@ -20,7 +20,17 @@
 ```
 main.js是你的程序的入口，名字也可任意的
 
-# 定义模块:
+# 定义模块：
+``` Javascript
+    var dao = require('dao');
+    
+    module.exports = {
+    	//TODO:
+    };
+```
+与Node模块完全一致, 需要在Grunt的插件concat做一下配置。
+
+# 定义模块(纯浏览器端）:
 ``` Javascript
   // main.js
   define('main', function (require, module, exports){
@@ -49,12 +59,13 @@ main.js是你的程序的入口，名字也可任意的
 
 # 配置
 - 修改加载目录:
-``` Javascript
-  define.config.findPath: './' // 默认为当前页面所在目录
-```
+	``` Javascript
+	  define.config.findPath = './js/';  // 默认为当前页面所在目录(./)
+	```
 - 开启调试模式(查看包的依赖和加载）：
-``` Javascript
-  define.config.debug = true;
-```
+	``` Javascript
+	  define.config.debug = true;
+	```
 查看控制台：
+
 ![Completion](https://raw.githubusercontent.com/deyuwang/jmd.js/master/images/screenshot.png)
