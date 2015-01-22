@@ -20,8 +20,9 @@
 ```
 main.js是你的程序的入口，名字也可任意的
 
-# 定义模块：main:
+# 定义模块:
 ``` Javascript
+  // main.js
   define('main', function (require, module, exports){
     
     var util = require('util');
@@ -32,6 +33,16 @@ main.js是你的程序的入口，名字也可任意的
     module.exports = {
     	//TODO:
     };
+  });
+  
+  // util.js
+  define('util', function (require, module, exports){
+    
+    function trim(str){
+    }
+    
+    module.exports.trim = trim;
+    
   });
 ```
 模块名称就是文件的名称
