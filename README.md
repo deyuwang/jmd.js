@@ -50,7 +50,11 @@ main.js是你的程序的入口，名字也可任意的
 # 配置
 - 修改加载目录:
 ``` Javascript
-  define.config = {
-    findPath: './' // 默认为当前页面所在目录
-  };
+  define.config.findPath: './' // 默认为当前页面所在目录
 ```
+- 开启调试模式(查看包的依赖和加载）：
+``` Javascript
+  define.config.debug = true;
+```
+查看控制台：
+![Completion](https://raw.githubusercontent.com/deyuwang/jmd.js/master/images/screenshot.png)
