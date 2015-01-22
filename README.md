@@ -1,5 +1,5 @@
 # jmd.js
-极小型、高性能、浏览器端Javascript模块化库
+极小型、高性能Javascript模块化管理库(浏览器端)
 
 # 特点
   - 遵循 CMD 规范，可以像Node.js 一样来写模块代码
