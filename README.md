@@ -1,11 +1,14 @@
 # jmd.js
 极小型、高性能Javascript模块化管理库(浏览器端)
 
+
+![Completion](https://raw.githubusercontent.com/deyuwang/jmd.js/master/images/logo.png)
+
 # 特点
   - 遵循规范，可以像Node.js 一样来写模块代码（参见：AMD、CMD）
   - 完全异步，不对源码做任何改动、没eval、setTimeout，全速加载!
   - 干干净净，只有一个函数：**define**，连学习文档都不需要了！
-  - 代码小巧，但扩展能力非凡
+  - 代码小巧，压缩后: **1.6kb**，移动平台、各种浏览器都支持
   - 用着放心，依赖关系自动维护，井井有序，不存在重复加载等问题
 
 # 如何使用
