@@ -1,0 +1,111 @@
+#+TITLE:       jmd.js
+#+AUTHOR:      Deyu Wang
+#+DATE:        2015-01
+#+EMAIL:       wangdeyu97@163.com
+#+DESCRIPTION: jmd developer guide.
+#+KEYWORDS:    jmd javascript module loader
+#+LANGUAGE:    cn
+#+TEXT:        
+#+TEXT:        
+
+# Turn off default internal styles
+#+OPTIONS: html-style:nil
+
+# Exporting to HTML5
+#+HTML_DOCTYPE: html5
+#+HTML_HEAD: <meta http-equiv="X-UA-Compatible" content="IE=edge">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
+#+STYLE: <link href="./style/style.css" rel="stylesheet" type="text/css">
+
+
+* 介绍
+  *jmd.js* ： 极小型、高性能Javascript模块化管理库(浏览器端)
+
+  - 源码: https://github.com/deyuwang/jmd.js
+  - 演示: http://deyuwang.github.io/jmd.js/demo/index.html
+
+* 特性
+  - 遵循规范，可以像Node.js 一样来写模块代码（参见：AMD、CMD）
+  - 完全异步，不对源码做任何改动、没eval、setTimeout，全速加载!
+  - 干干净净，只有一个函数：**define**，连学习文档都不需要了！
+  - 代码小巧，压缩后: **1.48kb**，移动平台、各种浏览器都支持
+  - 用着放心，依赖关系自动维护，井井有序，不存在重复加载等问题
+
+* 使用
+#+begin_src html
+<html>
+  <head>
+	<script src="jmd.js"></script>
+	<script src="main.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
+#+end_src
+main.js是你的程序的入口，名字也可任意的
+* 定义模块：
+#+begin_src Javascript
+    var dao = require('dao');
+    
+    module.exports = {
+    	//TODO:
+    };
+#+end_src
+与Node模块完全一致, 需要在Grunt的插件concat做一下配置。
+
+* 定义模块(纯浏览器端）:
+#+begin_src Javascript
+  // main.js
+  define('main', function (require, module, exports){
+    
+    var util = require('util');
+    var $ = require('jquery');
+    
+    module.exports = {
+    	//TODO:
+    };
+  });
+  
+  // util.js
+  define('util', ['zip', 'md5'] , function (require, module, exports){
+    
+    function trim(str){
+    }
+    
+    module.exports.trim = trim;
+    
+  });
+#+end_src
+模块名称就是文件的名称, 多个模块也可以写在一个js文件中（例如最后压缩成一个js文件也可以，不需要关心顺序）。
+
+* 配置
+- 修改加载目录:
+#+begin_src Javascript
+  define.config.findPath = './lib/';  // 非必选
+#+end_src
+- 开启调试模式：
+#+begin_src Javascript
+  define.config.debug = true;
+#+end_src
+然后在控制台查看包加载和依赖关系：
+
+https://raw.githubusercontent.com/deyuwang/jmd.js/master/images/screenshot.png
+
+
+* 第三方js库:
+#+begin_src Javascript
+    // 假如第三方库是jquery,并且没有遵循CMD或者AMD:
+    // var $= require('jquery'); 去掉前面的 var $= 即可,如:
+    require('jquery');
+    
+    // 正常使用
+    $('div').css({});
+    
+    module.exports = {
+    	//TODO:
+    };
+#+end_src
+
+* 贡献
+
+仅仅一个不错的开始还不够，还需要你的加入，Fork me！
