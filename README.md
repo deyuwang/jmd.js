@@ -62,7 +62,7 @@ main.js是你的程序的入口，名字也可任意的
 # 配置
 - 修改加载目录:
 ``` Javascript
-  define.config.findPath = './js/';  // 默认为当前页面所在目录(./)
+  define.config.findPath = './lib/';  // 非必选
 ```
 - 开启调试模式：
 ``` Javascript
@@ -75,13 +75,8 @@ main.js是你的程序的入口，名字也可任意的
 
 # 第三方js库:
 ``` Javascript
-    // 假如第三方库是jquery
-    var $ = require('jquery');
-    
-    // 如果jquery没有遵循CMD或者AMD，下面两种写法均可：
-    var bar = require('jquery');  // 写法一
-    
-    require('jquery');  // 写法二
+    // 假如第三方库是jquery,并且没有遵循CMD或者AMD:
+    require('jquery'); //去掉前面的 var $= 即可
     
     // 正常使用
     $('div').css({});
