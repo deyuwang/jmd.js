@@ -249,19 +249,29 @@ define('util', ['zip', 'md5'] , function (require, module, exports){
 <pre class="example">define.config.findPath = './lib/';  // 非必选
 </pre>
 
+
 <ul>
-<li>开启调试模式：
+<li>查看包加载信息
 </li>
 </ul>
 
 
 
 
-<pre class="example">define.config.debug = true;
+<pre class="example">&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="jmd.js"&gt;&lt;/script&gt;
+    &lt;script src="jmd-debug.js"&gt;&lt;/script&gt; &lt;!-- 引入jmd-debug.js --&gt;
+    &lt;script src="main.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 </pre>
 
+
 <p>
-然后在控制台查看包加载和依赖关系：
+演示: <a href="http://deyuwang.github.io/jmd.js/demo/index.html">http://deyuwang.github.io/jmd.js/demo/index.html</a>
 </p>
 <p>
 <img src="https://raw.githubusercontent.com/deyuwang/jmd.js/master/images/screenshot.png"  alt="https://raw.githubusercontent.com/deyuwang/jmd.js/master/images/screenshot.png" />

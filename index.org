@@ -83,11 +83,21 @@ main.js是你的程序的入口，名字也可任意的
 #+begin_src Javascript
   define.config.findPath = './lib/';  // 非必选
 #+end_src
-- 开启调试模式：
-#+begin_src Javascript
-  define.config.debug = true;
+
+- 查看包加载信息
+#+begin_src html
+<html>
+  <head>
+	<script src="jmd.js"></script>
+	<script src="jmd-debug.js"></script> <!-- 引入jmd-debug.js -->
+	<script src="main.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
 #+end_src
-然后在控制台查看包加载和依赖关系：
+
+演示: http://deyuwang.github.io/jmd.js/demo/index.html
 
 https://raw.githubusercontent.com/deyuwang/jmd.js/master/images/screenshot.png
 
