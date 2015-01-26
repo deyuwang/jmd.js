@@ -1,16 +1,19 @@
 {
   "name": "jmd",
-  "version": "0.1.0",
-  "devDependencies": {
+  "version": "0.2.0",
+  "description": "A Module Loader for the Web, can be used many Javascript environments.",
+    "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-uglify": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.0"
+    "grunt-contrib-uglify": "^0.6.0"
   },
-  "description": "The javascript module libiray.",
-  "main": "/src/jmd.js",
-  "dependencies": {
-    "grunt": "~0.4.5"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deyuwang/jmd.js.git"
   },
+  "keywords": [
+    "javascript",
+    "module"
+  ],  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

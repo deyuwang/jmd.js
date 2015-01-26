@@ -1,4 +1,4 @@
-define('dao', function (require, module, exports){
+define('js/dao', function (require, module, exports){
 	
 	var foo = {
 		save : function (obj) {

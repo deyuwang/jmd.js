@@ -1,6 +1,6 @@
 define('service', function (require, module, exports){
 
-	var dao = require('dao');
+	var dao = require('js/dao');
 	
 	function Service() {
 
