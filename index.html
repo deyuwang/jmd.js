@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="gbk"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="cn" xml:lang="cn">
+<!DOCTYPE HTML>
+<html>
 <head>
 <title>jmd.js</title>
-<meta http-equiv="Content-Type" content="text/html;charset=gbk"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="title" content="jmd.js"/>
 <meta name="generator" content="Org-mode"/>
 <meta name="generated" content="2015-01"/>
@@ -104,28 +102,28 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 ½éÉÜ</a></li>
-<li><a href="#sec-2">2 ÌØÐÔ</a></li>
-<li><a href="#sec-3">3 Ê¹ÓÃ</a></li>
-<li><a href="#sec-4">4 ¶¨ÒåÄ£¿é£º</a></li>
-<li><a href="#sec-5">5 ¶¨ÒåÄ£¿é(´¿ä¯ÀÀÆ÷¶Ë£©:</a></li>
-<li><a href="#sec-6">6 ÅäÖÃ</a></li>
-<li><a href="#sec-7">7 µÚÈý·½js¿â:</a></li>
-<li><a href="#sec-8">8 ¹±Ï×</a></li>
+<li><a href="#sec-1">1 ä»‹ç»</a></li>
+<li><a href="#sec-2">2 ç‰¹æ€§</a></li>
+<li><a href="#sec-3">3 ä½¿ç”¨</a></li>
+<li><a href="#sec-4">4 å®šä¹‰æ¨¡å—ï¼š</a></li>
+<li><a href="#sec-5">5 å®šä¹‰æ¨¡å—(çº¯æµè§ˆå™¨ç«¯ï¼‰:</a></li>
+<li><a href="#sec-6">6 é…ç½®</a></li>
+<li><a href="#sec-7">7 ç¬¬ä¸‰æ–¹jsåº“:</a></li>
+<li><a href="#sec-8">8 è´¡çŒ®</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> ½éÉÜ</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> ä»‹ç»</h2>
 <div class="outline-text-2" id="text-1">
 
-<p>  <b>jmd.js</b> £º ¼«Ð¡ÐÍ¡¢¸ßÐÔÄÜJavascriptÄ£¿é»¯¹ÜÀí¿â(ä¯ÀÀÆ÷¶Ë)
+<p>  <b>jmd.js</b> ï¼š æžå°åž‹ã€é«˜æ€§èƒ½Javascriptæ¨¡å—åŒ–ç®¡ç†åº“(æµè§ˆå™¨ç«¯)
 </p>
 <ul>
-<li>Ô´Âë: <a href="https://github.com/deyuwang/jmd.js">https://github.com/deyuwang/jmd.js</a>
+<li>æºç : <a href="https://github.com/deyuwang/jmd.js">https://github.com/deyuwang/jmd.js</a>
 </li>
-<li>ÑÝÊ¾: <a href="http://deyuwang.github.io/jmd.js/demo/index.html">http://deyuwang.github.io/jmd.js/demo/index.html</a>
+<li>æ¼”ç¤º: <a href="http://deyuwang.github.io/jmd.js/demo/index.html">http://deyuwang.github.io/jmd.js/demo/index.html</a>
 </li>
 </ul>
 
@@ -135,19 +133,19 @@
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> ÌØÐÔ</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> ç‰¹æ€§</h2>
 <div class="outline-text-2" id="text-2">
 
 <ul>
-<li>×ñÑ­¹æ·¶£¬¿ÉÒÔÏñNode.js Ò»ÑùÀ´Ð´Ä£¿é´úÂë£¨²Î¼û£ºAMD¡¢CMD£©
+<li>éµå¾ªè§„èŒƒï¼Œå¯ä»¥åƒNode.js ä¸€æ ·æ¥å†™æ¨¡å—ä»£ç ï¼ˆå‚è§ï¼šAMDã€CMDï¼‰
 </li>
-<li>ÍêÈ«Òì²½£¬²»¶ÔÔ´Âë×öÈÎºÎ¸Ä¶¯¡¢Ã»eval¡¢setTimeout£¬È«ËÙ¼ÓÔØ!
+<li>å®Œå…¨å¼‚æ­¥ï¼Œä¸å¯¹æºç åšä»»ä½•æ”¹åŠ¨ã€æ²¡evalã€setTimeoutï¼Œå…¨é€ŸåŠ è½½!
 </li>
-<li>¸É¸É¾»¾»£¬Ö»ÓÐÒ»¸öº¯Êý£º**define**£¬Á¬Ñ§Ï°ÎÄµµ¶¼²»ÐèÒªÁË£¡
+<li>å¹²å¹²å‡€å‡€ï¼Œåªæœ‰ä¸€ä¸ªå‡½æ•°ï¼š**define**ï¼Œè¿žå­¦ä¹ æ–‡æ¡£éƒ½ä¸éœ€è¦äº†ï¼
 </li>
-<li>´úÂëÐ¡ÇÉ£¬Ñ¹Ëõºó: **1.48kb**£¬ÒÆ¶¯Æ½Ì¨¡¢¸÷ÖÖä¯ÀÀÆ÷¶¼Ö§³Ö
+<li>ä»£ç å°å·§ï¼ŒåŽ‹ç¼©åŽ: **1.48kb**ï¼Œç§»åŠ¨å¹³å°ã€å„ç§æµè§ˆå™¨éƒ½æ”¯æŒ
 </li>
-<li>ÓÃ×Å·ÅÐÄ£¬ÒÀÀµ¹ØÏµ×Ô¶¯Î¬»¤£¬¾®¾®ÓÐÐò£¬²»´æÔÚÖØ¸´¼ÓÔØµÈÎÊÌâ
+<li>ç”¨ç€æ”¾å¿ƒï¼Œä¾èµ–å…³ç³»è‡ªåŠ¨ç»´æŠ¤ï¼Œäº•äº•æœ‰åºï¼Œä¸å­˜åœ¨é‡å¤åŠ è½½ç­‰é—®é¢˜
 </li>
 </ul>
 
@@ -157,7 +155,7 @@
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Ê¹ÓÃ</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> ä½¿ç”¨</h2>
 <div class="outline-text-2" id="text-3">
 
 
@@ -174,13 +172,13 @@
 </pre>
 
 <p>
-main.jsÊÇÄãµÄ³ÌÐòµÄÈë¿Ú£¬Ãû×ÖÒ²¿ÉÈÎÒâµÄ
+main.jsæ˜¯ä½ çš„ç¨‹åºçš„å…¥å£ï¼Œåå­—ä¹Ÿå¯ä»»æ„çš„
 </p></div>
 
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> ¶¨ÒåÄ£¿é£º</h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> å®šä¹‰æ¨¡å—ï¼š</h2>
 <div class="outline-text-2" id="text-4">
 
 
@@ -194,14 +192,14 @@ module.exports = {
 </pre>
 
 <p>
-ÓëNodeÄ£¿éÍêÈ«Ò»ÖÂ, ÐèÒªÔÚGruntµÄ²å¼þconcat×öÒ»ÏÂÅäÖÃ¡£
+ä¸ŽNodeæ¨¡å—å®Œå…¨ä¸€è‡´, éœ€è¦åœ¨Gruntçš„æ’ä»¶concatåšä¸€ä¸‹é…ç½®ã€‚
 </p>
 </div>
 
 </div>
 
 <div id="outline-container-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> ¶¨ÒåÄ£¿é(´¿ä¯ÀÀÆ÷¶Ë£©:</h2>
+<h2 id="sec-5"><span class="section-number-2">5</span> å®šä¹‰æ¨¡å—(çº¯æµè§ˆå™¨ç«¯ï¼‰:</h2>
 <div class="outline-text-2" id="text-5">
 
 
@@ -230,29 +228,29 @@ define('util', ['zip', 'md5'] , function (require, module, exports){
 </pre>
 
 <p>
-Ä£¿éÃû³Æ¾ÍÊÇÎÄ¼þµÄÃû³Æ, ¶à¸öÄ£¿éÒ²¿ÉÒÔÐ´ÔÚÒ»¸öjsÎÄ¼þÖÐ£¨ÀýÈç×îºóÑ¹Ëõ³ÉÒ»¸öjsÎÄ¼þÒ²¿ÉÒÔ£¬²»ÐèÒª¹ØÐÄË³Ðò£©¡£
+æ¨¡å—åç§°å°±æ˜¯æ–‡ä»¶çš„åç§°, å¤šä¸ªæ¨¡å—ä¹Ÿå¯ä»¥å†™åœ¨ä¸€ä¸ªjsæ–‡ä»¶ä¸­ï¼ˆä¾‹å¦‚æœ€åŽåŽ‹ç¼©æˆä¸€ä¸ªjsæ–‡ä»¶ä¹Ÿå¯ä»¥ï¼Œä¸éœ€è¦å…³å¿ƒé¡ºåºï¼‰ã€‚
 </p>
 </div>
 
 </div>
 
 <div id="outline-container-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> ÅäÖÃ</h2>
+<h2 id="sec-6"><span class="section-number-2">6</span> é…ç½®</h2>
 <div class="outline-text-2" id="text-6">
 
 <ul>
-<li>ÐÞ¸Ä¼ÓÔØÄ¿Â¼:
+<li>ä¿®æ”¹åŠ è½½ç›®å½•:
 </li>
 </ul>
 
 
 
 
-<pre class="example">define.config.findPath = './lib/';  // ·Ç±ØÑ¡
+<pre class="example">define.config.findPath = './lib/';  // éžå¿…é€‰
 </pre>
 
 <ul>
-<li>¿ªÆôµ÷ÊÔÄ£Ê½£º
+<li>å¼€å¯è°ƒè¯•æ¨¡å¼ï¼š
 </li>
 </ul>
 
@@ -263,7 +261,7 @@ define('util', ['zip', 'md5'] , function (require, module, exports){
 </pre>
 
 <p>
-È»ºóÔÚ¿ØÖÆÌ¨²é¿´°ü¼ÓÔØºÍÒÀÀµ¹ØÏµ£º
+ç„¶åŽåœ¨æŽ§åˆ¶å°æŸ¥çœ‹åŒ…åŠ è½½å’Œä¾èµ–å…³ç³»ï¼š
 </p>
 <p>
 <img src="https://raw.githubusercontent.com/deyuwang/jmd.js/master/images/screenshot.png"  alt="https://raw.githubusercontent.com/deyuwang/jmd.js/master/images/screenshot.png" />
@@ -274,17 +272,17 @@ define('util', ['zip', 'md5'] , function (require, module, exports){
 </div>
 
 <div id="outline-container-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> µÚÈý·½js¿â:</h2>
+<h2 id="sec-7"><span class="section-number-2">7</span> ç¬¬ä¸‰æ–¹jsåº“:</h2>
 <div class="outline-text-2" id="text-7">
 
 
 
 
-<pre class="example">// ¼ÙÈçµÚÈý·½¿âÊÇjquery,²¢ÇÒÃ»ÓÐ×ñÑ­CMD»òÕßAMD:
-// var $= require('jquery'); È¥µôÇ°ÃæµÄ var $= ¼´¿É,Èç:
+<pre class="example">// å‡å¦‚ç¬¬ä¸‰æ–¹åº“æ˜¯jquery,å¹¶ä¸”æ²¡æœ‰éµå¾ªCMDæˆ–è€…AMD:
+// var $= require('jquery'); åŽ»æŽ‰å‰é¢çš„ var $= å³å¯,å¦‚:
 require('jquery');
 
-// Õý³£Ê¹ÓÃ
+// æ­£å¸¸ä½¿ç”¨
 $('div').css({});
 
 module.exports = {
@@ -298,12 +296,12 @@ module.exports = {
 </div>
 
 <div id="outline-container-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> ¹±Ï×</h2>
+<h2 id="sec-8"><span class="section-number-2">8</span> è´¡çŒ®</h2>
 <div class="outline-text-2" id="text-8">
 
 
 <p>
-½ö½öÒ»¸ö²»´íµÄ¿ªÊ¼»¹²»¹»£¬»¹ÐèÒªÄãµÄ¼ÓÈë£¬Fork me£¡
+ä»…ä»…ä¸€ä¸ªä¸é”™çš„å¼€å§‹è¿˜ä¸å¤Ÿï¼Œè¿˜éœ€è¦ä½ çš„åŠ å…¥ï¼ŒFork meï¼
 </p></div>
 </div>
 </div>
