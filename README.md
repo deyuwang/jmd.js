@@ -1,8 +1,9 @@
 # jmd.js
 极小型、高性能Javascript模块化管理库(浏览器端)
 
-
 ![Completion](https://raw.githubusercontent.com/deyuwang/jmd.js/master/images/logo.png)
+
+主页： http://deyuwang.github.io/jmd.js/
 
 # 特点
   - 遵循规范，可以像Node.js 一样来写模块代码（参见：AMD、CMD）
