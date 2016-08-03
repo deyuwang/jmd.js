@@ -1,45 +1,43 @@
 (function(exports){
-	
-    var handlerMap = {};
+	var handlerMap = {};
 
-    function addEventListener(topic, handler){
-        var handlers = handlerMap[topic];
-        if(handlers == null){
-            handlerMap[topic] = [];
-        }
+	function addEventListener(topic, handler){
+		var handlers = handlerMap[topic];
+		if(handlers == null){
+			handlerMap[topic] = [];
+		}
 		handlerMap[topic].push(handler);
-    }
+	}
 
-    function addEventListeners(topics, handler){
-        var counter = 0;
-        for(var i=0; i<topics.length; i++){
+	function addEventListeners(topics, handler){
+		var counter = 0;
+		for(var i=0; i<topics.length; i++){
 			var topic = topics[i];
-            var handlers = handlerMap[topic];
-            if(handlers == null){
-                handlerMap[topic] = [];
-            }
-            handlerMap[topic].push(function (result){
+			var handlers = handlerMap[topic];
+			if(handlers == null){
+				handlerMap[topic] = [];
+			}
+			handlerMap[topic].push(function (result){
 				if((++counter) === topics.length){
 					return handler(result);
 				}else{
 					return null;
 				}
 			});
-        }
-    }
+		}
+	}
 
-    function dispatchEvent(topic, event){
-        var handlers = handlerMap[topic];
-        if(handlers != null){
-            for(var i=0; i<handlers.length; i++){
-                handlers[i](event);
-            }
-        }
-    }
-	
+	function dispatchEvent(topic, event){
+		var handlers = handlerMap[topic];
+		if(handlers != null){
+			for(var i=0; i<handlers.length; i++){
+				handlers[i](event);
+			}
+		}
+	}
 
 	function Module(name, deps, body) {
-        this.name = name;
+		this.name = name;
 		this.deps = deps;
 		this.body = body;
 		this.exports = {};
@@ -106,7 +104,7 @@
 	}
 
 
-	var re = /[^.]\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/ig;    
+	var re = /[^.]\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/ig;
 	function getRequireNames(str) {
 		var names = [];
 		var r = re.exec(str);
@@ -119,7 +117,7 @@
 
 	var loadedFiles = {};
 	function load(name) {
-		if(loadedFiles[name] != null) return; 
+		if(loadedFiles[name] != null) return;
 		loadedFiles[name] = true;
 
 		var path = define.config.findPath + name + '.js';
@@ -128,8 +126,8 @@
 		var script = document.createElement('script');
 		var body = document.getElementsByTagName('HEAD')[0];
 		script.type = "text/javascript";
-        script.charset = 'utf-8';
-        script.async = true;
+		script.charset = 'utf-8';
+		script.async = true;
 		script.src = path;
 		body.appendChild(script);
 		script.onload = function(){
@@ -143,7 +141,7 @@
 	define.config = config;
 
 	define.alias = function (args) {
-        for(var k in args){
+		for(var k in args){
 			alias[k] = args[k];
 		}
 	};
@@ -152,4 +150,4 @@
 	define.dispatchEvent = dispatchEvent;
 
 	exports.define = define;
-})(window);	
+})(window);
